@@ -17,7 +17,7 @@ $ pip install -r requirements.txt
 
 ### Dataset
 
-The data for CASF 2016 and CASF 2013 can be found in 'data'
+The data for CASF 2016 and CASF 2013 can be found in `data`
 
 ### Pre-training
 
@@ -39,4 +39,4 @@ We also provide pre-trained and Downstream models, which can be found in `pth` r
 
 ### Model evaluation
 
-Model evaluation in 'Model evalution.ipynb'
+Model evaluation in `Model evalution.ipynb`
