@@ -12,7 +12,6 @@ Set up conda environment and clone the github repo
 
 ```
 $ pip install -r requirements.txt
-
 ```
 
 ### Dataset
