@@ -339,7 +339,7 @@ def pdbbind_handle(pdbid, args):
 def UserInput():
     import argparse
     p = argparse.ArgumentParser()
-    p.add_argument('-d', '--dir', default="/home/sun/A-zhangyunjiang/Artcle_code/RTMScore复现/data/v2020-other-PL/",
+    p.add_argument('-d', '--dir', default="/data/",
                    help='The directory to store the protein-ligand complexes.')
     p.add_argument('-c', '--cutoff', default=15.0, type=float,
                    help='the cutoff to determine the pocket')
