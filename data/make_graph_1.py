@@ -3,33 +3,23 @@ import pandas as pd
 from mol2graph import pdbbind_handle,drop_nodes,permute_edges,subgraph
 import os
 from copy import deepcopy
-
 import multiprocessing
 
-filelist = os.listdir('/home/sun/data/zhangyunjiang/RTMScore复现/data/new_data/data_2')
-protein_path='/home/sun/data/zhangyunjiang/RTMScore复现/data/new_data/data_2'
-ligand_path='/home/sun/data/zhangyunjiang/RTMScore复现/data/new_data/data_2'
+filelist = os.listdir('/data')
+protein_path='/data/'
+ligand_path='/data/'
 results = []
-fingerprints =[]
 error=[]
-
 for index,i in enumerate(filelist):
 #def handle(index,i):
-    #output=pdbbind_handle(i,protein_path,ligand_path,10.0)
+    #output=pdbbind_handle(i,protein_path,ligand_path,5.0)
     #results.append(output)
     a=i.split("_")
     fingerprints =[]
     ids=[]
     graphs_p=[]   
     graphs_l=[]
-
-    
-    
-    #try:
-    #print(i)
-    #receptor = next(oddt.toolkit.readfile('pdb','%s/%s/'%(protein_path,i)+a[0]+'_handle_pocket_10.0.pdb'))
-    #ligand = next(oddt.toolkit.readfile('pdb','%s/%s/'%(protein_path,i)+a[0]+'_'+a[2]+'_'+a[3]+ "_"+a[4]+'.pdb'))
-    protein_path_pdb='%s/%s/'%(protein_path,i)+a[0]+'_handle_pocket_10.0.pdb'
+    protein_path_pdb='%s/%s/'%(protein_path,i)+a[0]+'_handle_pocket_5.0.pdb'
     ligand_path_pdb='%s/%s/'%(protein_path,i)+a[0]+'_'+a[2]+'_'+a[3]+ "_"+a[4]+'.pdb'
     try:
         pdbid, gp, gl=pdbbind_handle(i,protein_path_pdb,ligand_path_pdb,10.0)
@@ -79,7 +69,7 @@ for index,i in enumerate(filelist):
 #if __name__=='__main__':
 #    #print('Parent process %s.' % os.getpid())
 #    p = Pool(20)
-#    #f = open('/home/sun/data/pdb/pdb_id.txt')
+#    #f = open('/data/pdb/pdb_id.txt')
     #lines = f.readlines()  
 #    for index,i in enumerate(filelist):
 #        #print(index)
